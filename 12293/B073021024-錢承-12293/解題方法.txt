@@ -1,0 +1,2 @@
+由整理input資料可得知，當input為2^i-1時，Bob必勝，否則Alice必勝。
+將input n加一取log2,若為整數，則Bob勝利，否者Alice勝利。

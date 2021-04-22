@@ -1,0 +1,1 @@
+利用退化的BFS,在每一個node時,尋找與其相連的node中weight最大的,找到後前往那個weight最大的node,重複以上步驟直到node無任何相鄰node。
