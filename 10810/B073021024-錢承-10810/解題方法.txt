@@ -1,0 +1,1 @@
+使用merge sort。首先宣告count變數，在進行左右合併時，若為右邊加入合併的array，則count加上左邊尚未合併的個數，最後count及為所求。
