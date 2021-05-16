@@ -80,15 +80,7 @@ int main()
             }
         }
 
-        for (int i = 0; i < hotel.size(); i++)
-        {
-            for (int j = 0; j < hotel.size(); j++)
-                cout << hotel2hotel[i][j] << " ";
-            cout << endl;
-        }
-
-
-        int c = 1;
+        int c = 0;
         if (ans[0][1])
         {
             cout << c << endl;
@@ -98,13 +90,13 @@ int main()
         {
             c++;
             for (int j = 0; j < hotel.size(); j++)
-            {
                 for (int k = 0; k < hotel.size(); k++)
-                {
+                    ans[j][k] = 0;
+            for (int j = 0; j < hotel.size(); j++)
+                for (int k = 0; k < hotel.size(); k++)
                     for (int m = 0; m < hotel.size(); m++)
-                        ans[j][k] += hotel2hotel[k][m] * count[m][k];
-                }
-            }
+                        ans[j][k] += hotel2hotel[j][m] * count[m][k];
+
             if (ans[0][1])
                 break;
             for (int j = 0; j < hotel.size(); j++)
@@ -112,9 +104,9 @@ int main()
                     count[j][k] = ans[j][k];
         }
         if (ans[0][1])
-        cout << c << endl;
+            cout << c << endl;
         else
-            cout<<"-1"<<endl;
+            cout << "-1" << endl;
     }
 }
 /*
@@ -129,7 +121,14 @@ int main()
 1 3 375
 2 5 462
 4 6 300
-0 
+
+3
+0
+2
+1 2 371
+2 3 230
+
+
 
   |  1   6   2   5   3
 -----------------------
