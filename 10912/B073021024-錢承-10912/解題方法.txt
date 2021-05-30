@@ -1,0 +1,7 @@
+使用DP，令dp[i][j][k]=> 前i個字母中，選取j個字母，hash值為k。
+可以分為 1.不取第i個字母（dp[i-1][j][k]） 2.取第i個字母（dp[i-1][j-1][k-i]）
+dp[i][j][k] =  dp[i-1][j][k] + dp[i-1][j-1][k-i] , if k >= i
+dp[i][j][k] =  dp[i-1][j][k] ， otherwise
+
+input為L、S，最後dp[26][L][S]即為答案
+
